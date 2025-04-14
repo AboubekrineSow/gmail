@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Phishing Simulation Dashboard</h1>
+
+    <h2>Identifiants collectés</h2>
+    <table>
+        <tr><th>Email</th><th>Mot de passe</th><th>Date</th></tr>
+        {% for row in creds %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Visiteurs</h2>
+    <table>
+        <tr><th>IP</th><th>Browser</th><th>Date</th></tr>
+        {% for row in visitors %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

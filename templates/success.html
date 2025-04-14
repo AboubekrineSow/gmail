@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion réussie</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .box h1 {
+            color: #28a745;
+        }
+        .box p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Connexion réussie</h1>
+        <p>Vous allez être redirigé dans un instant...</p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://www.google.com";  // ou un lien réel
+        }, 3000); // 3 secondes
+    </script>
+</body>
+</html>
